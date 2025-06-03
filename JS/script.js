@@ -54,8 +54,7 @@ function initMap() {
 }
 
 async function getWeatherData(lat, lon) {
-    const apiKey = '66e5d7713da311790ba3e962636678e1';
-    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+    const url = `http://localhost:3000/weather?lat=${lat}&lon=${lon}`;
     try {
         const response = await fetch(url);
         if (!response.ok) throw new Error("Erro na resposta");
@@ -65,6 +64,7 @@ async function getWeatherData(lat, lon) {
         return null;
     }
 }
+
 
 async function getElevation(lat, lon) {
     try {
