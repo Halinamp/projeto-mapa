@@ -1,0 +1,78 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  padding: 10px;
+  background: #3498db;
+  color: white;
+  text-align: center;
+}
+
+#locationInput {
+  padding: 5px;
+  width: 200px;
+}
+
+button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+#popup {
+  position: fixed;
+  top: 100px;
+  left: 10px;     /* distância da borda esquerda */
+  right: auto;
+  width: 300px;
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  padding: 10px;
+  border-radius: 8px;
+  display: none;
+}
+
+#popup.show {
+  display: block;
+}
+
+#popup.hide {
+  display: none;
+}
+
+.close-btn {
+  float: right;
+  background: #e74c3c;
+  border: none;
+  color: white;
+  padding: 4px 8px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.info.legend {
+  padding: 10px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #333;
+}
+
+.info.legend h4 {
+  margin: 0 0 5px;
+}
+
+.info.legend i {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  opacity: 0.8;
+  vertical-align: middle;
+}

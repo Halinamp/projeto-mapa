@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mapa Interativo</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="header">
+    <h1>Mapa Interativo</h1>
+    <input type="text" id="locationInput" placeholder="Digite uma localização..." />
+    <button onclick="searchLocation()">Buscar</button>
+  </div>
+
+  <div id="map" style="height: 500px;"></div>
+
+  <div id="popup" class="hide">
+    <button class="close-btn" onclick="closePopup()">X</button>
+    <div class="popup-header">
+      <h3>Detalhes da Localização</h3>
+    </div>
+    <div class="popup-content">
+      <p><strong>Latitude:</strong> <span id="popup-latitude"></span></p>
+      <p><strong>Longitude:</strong> <span id="popup-longitude"></span></p>
+      <p><strong>Temperatura:</strong> <span id="popup-temperature"></span>°C</p>
+      <p><strong>Condição:</strong> <span id="popup-description"></span></p>
+      <p><strong>Altitude:</strong> <span id="popup-elevation"></span></p>
+    </div>
+    <canvas id="climateChart" width="300" height="200"></canvas>
+  </div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/esri-leaflet"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
